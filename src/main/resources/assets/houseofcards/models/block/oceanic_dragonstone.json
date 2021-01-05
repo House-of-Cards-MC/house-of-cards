@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "houseofcards:block/oceanic_dragonstone"
+  }
+}

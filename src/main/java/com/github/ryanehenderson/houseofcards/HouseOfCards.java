@@ -1,6 +1,12 @@
 package com.github.ryanehenderson.houseofcards;
 
+import com.github.ryanehenderson.houseofcards.lists.BlockList;
 import com.github.ryanehenderson.houseofcards.lists.ItemList;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
@@ -32,10 +38,19 @@ public class HouseOfCards {
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event) {
             event.getRegistry().registerAll(
-                    ItemList.turtle_flesh = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(getLocation("turtle_flesh"))
+                    ItemList.turtle_flesh = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(getLocation("turtle_flesh")),
+                    ItemList.oceanic_dragonstone = new BlockItem(BlockList.oceanic_dragonstone, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(BlockList.oceanic_dragonstone.getRegistryName())
             );
 
             logger.info("Items registered");
+        }
+
+        @SubscribeEvent
+        public static void registerBlocks(final RegistryEvent.Register<Block> event) {
+            event.getRegistry().registerAll(
+                    BlockList.oceanic_dragonstone = new Block(Block.Properties.create(Material.IRON)).setRegistryName(getLocation("oceanic_dragonstone"))
+            );
+            logger.info("Blocks registered");
         }
 
         private static ResourceLocation getLocation(String name) {

@@ -4,4 +4,5 @@ import net.minecraft.item.Item;
 
 public class ItemList {
     public static Item turtle_flesh;
+    public static Item oceanic_dragonstone;
 }
