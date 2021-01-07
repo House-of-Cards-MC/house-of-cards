@@ -23,8 +23,8 @@ import org.apache.logging.log4j.Logger;
 @Mod("houseofcards")
 public class HouseOfCards {
     private static HouseOfCards instance;
-    private static final String modId = "houseofcards";
-    private static final Logger logger = LogManager.getLogger(modId);
+    private static final String MODID = "houseofcards";
+    private static final Logger LOGGER = LogManager.getLogger(MODID);
 
     public HouseOfCards() {
         instance = this;
@@ -42,7 +42,7 @@ public class HouseOfCards {
                     ItemList.oceanic_dragonstone = new BlockItem(BlockList.oceanic_dragonstone, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(BlockList.oceanic_dragonstone.getRegistryName())
             );
 
-            logger.info("Items registered");
+            LOGGER.info("Items registered");
         }
 
         @SubscribeEvent
@@ -50,20 +50,20 @@ public class HouseOfCards {
             event.getRegistry().registerAll(
                     BlockList.oceanic_dragonstone = new Block(Block.Properties.create(Material.IRON)).setRegistryName(getLocation("oceanic_dragonstone"))
             );
-            logger.info("Blocks registered");
+            LOGGER.info("Blocks registered");
         }
 
         private static ResourceLocation getLocation(String name) {
-            return new ResourceLocation(modId, name);
+            return new ResourceLocation(MODID, name);
         }
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        logger.info("Setup method registered");
+        LOGGER.info("Setup method registered");
     }
 
     private void clientRegistries(final FMLClientSetupEvent event) {
-        logger.info("clientRegistries method registered");
+        LOGGER.info("clientRegistries method registered");
     }
 
     public static HouseOfCards get() {
@@ -71,6 +71,6 @@ public class HouseOfCards {
     }
 
     private String getModId() {
-        return modId;
+        return MODID;
     }
 }
