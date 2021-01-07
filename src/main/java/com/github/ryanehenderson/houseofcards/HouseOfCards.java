@@ -33,7 +33,7 @@ public class HouseOfCards {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event) {
