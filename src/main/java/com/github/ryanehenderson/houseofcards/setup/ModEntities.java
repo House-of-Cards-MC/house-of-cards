@@ -14,8 +14,4 @@ public class ModEntities {
                     .size(23, 6)
                     .setShouldReceiveVelocityUpdates(false)
                     .build("hermit_dragon_sage"));
-
-    public static final RegistryObject<EntityType<HermitDragonSagePartEntity>> HERMIT_DRAGON_SAGE_PART = Registration.ENTITIES.register("hermit_dragon_sage_part", () ->
-            EntityType.Builder.create(HermitDragonSagePartEntity::new, EntityClassification.MONSTER)
-                    .build("hermit_dragon_sage_part"));
 }

@@ -2,12 +2,10 @@ package com.github.ryanehenderson.houseofcards.entities;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntitySize;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.Pose;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.IPacket;
 import net.minecraft.util.DamageSource;
-import net.minecraft.world.World;
 
 public class HermitDragonSagePartEntity extends Entity {
     public final HermitDragonSageEntity entity;
@@ -15,11 +13,11 @@ public class HermitDragonSagePartEntity extends Entity {
     private final EntitySize size;
 
     public HermitDragonSagePartEntity(HermitDragonSageEntity entityIn, String part, float width, float height) {
-        super(entityIn.getType(), entityIn.getEntityWorld());
+        super(entityIn.getType(), entityIn.world);
+        size = EntitySize.flexible(width, height);
+        this.recalculateSize();
         entity = entityIn;
         this.part = part;
-        size = EntitySize.flexible(width, height);
-        recalculateSize();
     }
 
     @Override

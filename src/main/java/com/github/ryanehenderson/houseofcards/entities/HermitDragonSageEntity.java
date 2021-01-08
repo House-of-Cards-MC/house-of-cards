@@ -1,5 +1,6 @@
 package com.github.ryanehenderson.houseofcards.entities;
 
+import com.github.ryanehenderson.houseofcards.HouseOfCards;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -15,7 +16,7 @@ public class HermitDragonSageEntity extends MonsterEntity {
     private final HermitDragonSagePartEntity sageEntityPart1;
     private final HermitDragonSagePartEntity sageEntityPart2;
 
-    public HermitDragonSageEntity(EntityType<? extends MonsterEntity> entityTypeIn, World worldIn) {
+    public HermitDragonSageEntity(EntityType<? extends HermitDragonSageEntity> entityTypeIn, World worldIn) {
         super(entityTypeIn, worldIn);
         sageEntityPart1 = new HermitDragonSagePartEntity(this, "head", 5.0F, 3.0F);
         sageEntityPart2 = new HermitDragonSagePartEntity(this, "neck",3.5F, 6.2F);
@@ -38,6 +39,7 @@ public class HermitDragonSageEntity extends MonsterEntity {
     }
 
     public void livingTick() {
+        //HouseOfCards.LOGGER.debug(this + ", " + sageEntityPart1 + ", " + sageEntityPart2);
         setPartPosition(sageEntityPart1, 3.5F, 0.4F, 5.2F);
         setPartPosition(sageEntityPart2, 2.6F, 3.5F, 8.9F);
     }
