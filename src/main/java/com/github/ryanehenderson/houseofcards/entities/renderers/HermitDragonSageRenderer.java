@@ -13,7 +13,7 @@ public class HermitDragonSageRenderer extends MobRenderer<HermitDragonSageEntity
     private static final ResourceLocation TEXTURE = new ResourceLocation(HouseOfCards.MOD_ID, "textures/entity/hermit_dragon_sage.png");
 
     public HermitDragonSageRenderer(EntityRendererManager manager) {
-        super(manager, new HermitDragonSageModel(), 0.5f);
+        super(manager, new HermitDragonSageModel(), 2.0f);
     }
 
     @Nullable

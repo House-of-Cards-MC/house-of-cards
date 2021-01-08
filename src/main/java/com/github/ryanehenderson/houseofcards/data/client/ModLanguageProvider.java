@@ -2,6 +2,7 @@ package com.github.ryanehenderson.houseofcards.data.client;
 
 import com.github.ryanehenderson.houseofcards.HouseOfCards;
 import com.github.ryanehenderson.houseofcards.setup.ModBlocks;
+import com.github.ryanehenderson.houseofcards.setup.ModEntities;
 import com.github.ryanehenderson.houseofcards.setup.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -19,5 +20,8 @@ public class ModLanguageProvider extends LanguageProvider {
         // Items
         add(ModItems.TURTLE_FLESH.get(), "Turtle Flesh");
         add(ModItems.HERMIT_DRAGON_SAGE_SPAWN_EGG.get(), "Hermit Dragon Sage Spawn Egg");
+
+        // Entities
+        add(ModEntities.HERMIT_DRAGON_SAGE.get(), "Hermit Dragon Sage");
     }
 }

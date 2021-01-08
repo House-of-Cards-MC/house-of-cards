@@ -1,9 +1,9 @@
 package com.github.ryanehenderson.houseofcards;
 
 import com.github.ryanehenderson.houseofcards.setup.ClientSetup;
+import com.github.ryanehenderson.houseofcards.setup.ModSetup;
 import com.github.ryanehenderson.houseofcards.setup.Registration;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,5 +19,6 @@ public class HouseOfCards {
         Registration.register();
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientSetup::init);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(ModSetup::init);
     }
 }
