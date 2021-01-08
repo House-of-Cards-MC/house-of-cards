@@ -18,5 +18,6 @@ public class ModLanguageProvider extends LanguageProvider {
 
         // Items
         add(ModItems.TURTLE_FLESH.get(), "Turtle Flesh");
+        add(ModItems.HERMIT_DRAGON_SAGE_SPAWN_EGG.get(), "Hermit Dragon Sage Spawn Egg");
     }
 }
