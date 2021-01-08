@@ -14,9 +14,9 @@ public class HermitDragonSagePartEntity extends Entity {
     public final String part;
     private final EntitySize size;
 
-    public HermitDragonSagePartEntity(HermitDragonSageEntity entityTypeIn, String part, float width, float height) {
-        super(entityTypeIn.getType(), entityTypeIn.getEntityWorld());
-        entity = entityTypeIn;
+    public HermitDragonSagePartEntity(HermitDragonSageEntity entityIn, String part, float width, float height) {
+        super(entityIn.getType(), entityIn.getEntityWorld());
+        entity = entityIn;
         this.part = part;
         size = EntitySize.flexible(width, height);
         recalculateSize();
