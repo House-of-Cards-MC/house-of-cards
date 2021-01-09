@@ -1,5 +1,7 @@
 package com.github.ryanehenderson.houseofcards.entities;
 
+import com.github.ryanehenderson.houseofcards.entities.imugi.ImugiColdEntity;
+import com.github.ryanehenderson.houseofcards.entities.imugi.ImugiEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -19,8 +21,8 @@ public class CycarpEntity extends AbstractFishEntity {
     protected void registerGoals() {
         super.registerGoals();
         this.goalSelector.addGoal(0, new FindWaterGoal(this));
-        this.goalSelector.addGoal(1, new PanicGoal(this, 3D));
-        this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 1.5d, 150));
+        this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, ImugiEntity.class, 100f, 20d, 100d));
+        this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 0.8d, 20));
     }
 
     public static AttributeModifierMap.MutableAttribute prepareAttributes() {

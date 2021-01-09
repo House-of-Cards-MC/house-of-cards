@@ -14,7 +14,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
  * HoCFISH - Indominator650
  * Created using Tabula 8.0.0
  */
-@OnlyIn(Dist.CLIENT)
 public class CycarpModel extends EntityModel<CycarpEntity> {
     public ModelRenderer Body;
     public ModelRenderer Head;
