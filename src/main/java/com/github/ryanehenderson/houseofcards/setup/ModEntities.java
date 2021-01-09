@@ -1,6 +1,7 @@
 package com.github.ryanehenderson.houseofcards.setup;
 
-import com.github.ryanehenderson.houseofcards.entities.*;
+import com.github.ryanehenderson.houseofcards.entities.CycarpEntity;
+import com.github.ryanehenderson.houseofcards.entities.HermitDragonSageEntity;
 import com.github.ryanehenderson.houseofcards.entities.imugi.*;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -14,6 +15,10 @@ public class ModEntities {
                     .size(23, 6)
                     .setShouldReceiveVelocityUpdates(false)
                     .build("hermit_dragon_sage"));
+    public static final RegistryObject<EntityType<CycarpEntity>> CYCARP = Registration.ENTITIES.register("cycarp", () ->
+            EntityType.Builder.create(CycarpEntity::new, EntityClassification.WATER_AMBIENT)
+                    .size(1.4f, 1f)
+                    .build("cycarp"));
     public static final RegistryObject<EntityType<ImugiColdEntity>> IMUGI_COLD = Registration.ENTITIES.register("imugi_cold", () ->
             EntityType.Builder.create(ImugiColdEntity::new, EntityClassification.WATER_CREATURE)
                     .size(1, 1)

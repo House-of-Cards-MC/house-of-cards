@@ -4,6 +4,7 @@ import com.github.ryanehenderson.houseofcards.HouseOfCards;
 import com.github.ryanehenderson.houseofcards.setup.ModBlocks;
 import com.github.ryanehenderson.houseofcards.setup.ModEntities;
 import com.github.ryanehenderson.houseofcards.setup.ModItems;
+
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -23,6 +24,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
         // Entities
         add(ModEntities.HERMIT_DRAGON_SAGE.get(), "Hermit Dragon Sage");
+        add(ModEntities.CYCARP.get(), "Cycarp");
         add(ModEntities.IMUGI_COLD.get(), "Imugi (cold)");
         add(ModEntities.IMUGI_FROZEN.get(), "Imugi (frozen)");
         add(ModEntities.IMUGI_GOLD.get(), "Imugi (gold)");
