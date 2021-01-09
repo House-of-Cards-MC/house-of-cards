@@ -1,6 +1,6 @@
-package com.github.ryanehenderson.houseofcards.entities.models;
+package com.github.ryanehenderson.houseofcards.entities.models.imugi;
 
-import com.github.ryanehenderson.houseofcards.entities.ImugiColdEntity;
+import com.github.ryanehenderson.houseofcards.entities.imugi.ImugiColdEntity;
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;

@@ -1,8 +1,8 @@
-package com.github.ryanehenderson.houseofcards.entities.renderers;
+package com.github.ryanehenderson.houseofcards.entities.renderers.imugi;
 
 import com.github.ryanehenderson.houseofcards.HouseOfCards;
-import com.github.ryanehenderson.houseofcards.entities.ImugiLukewarmEntity;
-import com.github.ryanehenderson.houseofcards.entities.models.ImugiLukewarmModel;
+import com.github.ryanehenderson.houseofcards.entities.imugi.ImugiLukewarmEntity;
+import com.github.ryanehenderson.houseofcards.entities.models.imugi.ImugiLukewarmModel;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;

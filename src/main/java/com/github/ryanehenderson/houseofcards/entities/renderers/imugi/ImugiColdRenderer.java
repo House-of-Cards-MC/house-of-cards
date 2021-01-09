@@ -1,8 +1,8 @@
-package com.github.ryanehenderson.houseofcards.entities.renderers;
+package com.github.ryanehenderson.houseofcards.entities.renderers.imugi;
 
 import com.github.ryanehenderson.houseofcards.HouseOfCards;
-import com.github.ryanehenderson.houseofcards.entities.ImugiColdEntity;
-import com.github.ryanehenderson.houseofcards.entities.models.ImugiColdModel;
+import com.github.ryanehenderson.houseofcards.entities.imugi.ImugiColdEntity;
+import com.github.ryanehenderson.houseofcards.entities.models.imugi.ImugiColdModel;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;

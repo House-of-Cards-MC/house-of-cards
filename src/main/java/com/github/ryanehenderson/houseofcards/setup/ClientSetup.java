@@ -1,6 +1,7 @@
 package com.github.ryanehenderson.houseofcards.setup;
 
 import com.github.ryanehenderson.houseofcards.entities.renderers.*;
+import com.github.ryanehenderson.houseofcards.entities.renderers.imugi.*;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 

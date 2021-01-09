@@ -1,6 +1,7 @@
 package com.github.ryanehenderson.houseofcards.setup;
 
 import com.github.ryanehenderson.houseofcards.entities.*;
+import com.github.ryanehenderson.houseofcards.entities.imugi.*;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 

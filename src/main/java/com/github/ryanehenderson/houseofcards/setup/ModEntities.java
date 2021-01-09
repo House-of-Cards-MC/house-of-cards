@@ -1,6 +1,7 @@
 package com.github.ryanehenderson.houseofcards.setup;
 
 import com.github.ryanehenderson.houseofcards.entities.*;
+import com.github.ryanehenderson.houseofcards.entities.imugi.*;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.fml.RegistryObject;

@@ -1,13 +1,13 @@
-package com.github.ryanehenderson.houseofcards.entities.models;
+package com.github.ryanehenderson.houseofcards.entities.models.imugi;
 
-import com.github.ryanehenderson.houseofcards.entities.ImugiOlmEntity;
+import com.github.ryanehenderson.houseofcards.entities.imugi.ImugiWarmEntity;
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 
-public class ImugiOlmModel extends EntityModel<ImugiOlmEntity> {
+public class ImugiWarmModel extends EntityModel<ImugiWarmEntity> {
     public ModelRenderer Torso;
     public ModelRenderer Waist;
     public ModelRenderer HeadJoint;
@@ -41,7 +41,7 @@ public class ImugiOlmModel extends EntityModel<ImugiOlmEntity> {
     public ModelRenderer TeethLowerRight;
     public ModelRenderer Tongue;
 
-    public ImugiOlmModel() {
+    public ImugiWarmModel() {
         this.textureWidth = 200;
         this.textureHeight = 200;
         this.GillsLeft2 = new ModelRenderer(this, 150, -15);
@@ -207,7 +207,7 @@ public class ImugiOlmModel extends EntityModel<ImugiOlmEntity> {
     }
 
     @Override
-    public void setRotationAngles(ImugiOlmEntity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {}
+    public void setRotationAngles(ImugiWarmEntity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {}
 
     /**
      * This is a helper function from Tabula to set the rotation of model parts

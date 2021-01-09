@@ -1,4 +1,4 @@
-package com.github.ryanehenderson.houseofcards.entities;
+package com.github.ryanehenderson.houseofcards.entities.imugi;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
