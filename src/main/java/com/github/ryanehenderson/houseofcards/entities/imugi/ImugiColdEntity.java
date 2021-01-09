@@ -5,7 +5,7 @@ import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.world.World;
 
 public class ImugiColdEntity extends ImugiEntity {
-    public ImugiColdEntity(EntityType<? extends MonsterEntity> type, World worldIn) {
+    public ImugiColdEntity(EntityType<? extends ImugiEntity> type, World worldIn) {
         super(type, worldIn);
     }
 }
