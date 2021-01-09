@@ -1,5 +1,6 @@
 package com.github.ryanehenderson.houseofcards.setup;
 
+import com.github.ryanehenderson.houseofcards.entities.CycarpEntity;
 import com.github.ryanehenderson.houseofcards.entities.HermitDragonSageEntity;
 import com.github.ryanehenderson.houseofcards.entities.HermitDragonSagePartEntity;
 import net.minecraft.entity.EntityClassification;
@@ -14,4 +15,8 @@ public class ModEntities {
                     .size(23, 6)
                     .setShouldReceiveVelocityUpdates(false)
                     .build("hermit_dragon_sage"));
+    public static final RegistryObject<EntityType<CycarpEntity>> CYCARP = Registration.ENTITIES.register("cycarp", () ->
+            EntityType.Builder.create(CycarpEntity::new, EntityClassification.WATER_AMBIENT)
+                    .size(1.4f, 1f)
+                    .build("cycarp"));
 }

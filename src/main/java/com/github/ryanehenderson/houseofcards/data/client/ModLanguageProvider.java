@@ -23,5 +23,6 @@ public class ModLanguageProvider extends LanguageProvider {
 
         // Entities
         add(ModEntities.HERMIT_DRAGON_SAGE.get(), "Hermit Dragon Sage");
+        add(ModEntities.CYCARP.get(), "Cycarp");
     }
 }
