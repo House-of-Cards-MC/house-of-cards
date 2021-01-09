@@ -1,8 +1,7 @@
 package com.github.ryanehenderson.houseofcards.setup;
 
-import com.github.ryanehenderson.houseofcards.entities.CycarpEntity;
-import com.github.ryanehenderson.houseofcards.entities.HermitDragonSageEntity;
-import com.github.ryanehenderson.houseofcards.entities.HermitDragonSagePartEntity;
+import com.github.ryanehenderson.houseofcards.entities.*;
+
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.fml.RegistryObject;
@@ -19,4 +18,28 @@ public class ModEntities {
             EntityType.Builder.create(CycarpEntity::new, EntityClassification.WATER_AMBIENT)
                     .size(1.4f, 1f)
                     .build("cycarp"));
+    public static final RegistryObject<EntityType<ImugiColdEntity>> IMUGI_COLD = Registration.ENTITIES.register("imugi_cold", () ->
+            EntityType.Builder.create(ImugiColdEntity::new, EntityClassification.MONSTER)
+                    .size(1, 1)
+                    .build("imugi_cold"));
+    public static final RegistryObject<EntityType<ImugiFrozenEntity>> IMUGI_FROZEN = Registration.ENTITIES.register("imugi_frozen", () ->
+            EntityType.Builder.create(ImugiFrozenEntity::new, EntityClassification.MONSTER)
+                    .size(1, 1)
+                    .build("imugi_frozen"));
+    public static final RegistryObject<EntityType<ImugiGoldEntity>> IMUGI_GOLD = Registration.ENTITIES.register("imugi_gold", () ->
+            EntityType.Builder.create(ImugiGoldEntity::new, EntityClassification.MONSTER)
+                    .size(1, 1)
+                    .build("imugi_gold"));
+    public static final RegistryObject<EntityType<ImugiLukewarmEntity>> IMUGI_LUKEWARM = Registration.ENTITIES.register("imugi_lukewarm", () ->
+            EntityType.Builder.create(ImugiLukewarmEntity::new, EntityClassification.MONSTER)
+                    .size(1, 1)
+                    .build("imugi_lukewarm"));
+    public static final RegistryObject<EntityType<ImugiOlmEntity>> IMUGI_OLM = Registration.ENTITIES.register("imugi_olm", () ->
+            EntityType.Builder.create(ImugiOlmEntity::new, EntityClassification.MONSTER)
+                    .size(1, 1)
+                    .build("imugi_olm"));
+    public static final RegistryObject<EntityType<ImugiWarmEntity>> IMUGI_WARM = Registration.ENTITIES.register("imugi_warm", () ->
+            EntityType.Builder.create(ImugiWarmEntity::new, EntityClassification.MONSTER)
+                    .size(1, 1)
+                    .build("imugi_warm"));
 }
