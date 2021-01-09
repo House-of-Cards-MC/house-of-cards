@@ -14,6 +14,7 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.GuardianEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.DolphinEntity;
+import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.passive.WaterMobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
@@ -30,8 +31,12 @@ public class ImugiEntity extends DolphinEntity {
 
     @Override
     public void registerGoals() {
-        super.registerGoals();
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2d, true));
+        //super.registerGoals();
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 2d, true));
+        this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.8d));
+        this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 1.2d, 10));
+
+        this.targetSelector.addGoal(0, new NearestAttackableTargetGoal<>(this, TurtleEntity.class, true));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, CycarpEntity.class, true));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
     }
@@ -47,5 +52,17 @@ public class ImugiEntity extends DolphinEntity {
     public static boolean canSpawn(EntityType<? extends ImugiEntity> imugi, IWorld worldIn, SpawnReason reason, BlockPos pos, Random random) {
         boolean spawn = pos.getY() > 45 && worldIn.getBlockState(pos).isIn(Blocks.WATER);
         return spawn;
+    }
+
+    public int getMoistness() {
+        return 2400;
+    }
+
+    public int getAir() {
+        return 300;
+    }
+
+    public boolean canBreatheUnderwater() {
+        return true;
     }
 }

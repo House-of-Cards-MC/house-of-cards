@@ -14,7 +14,7 @@ public class ModEntitySpawns {
         MobSpawnInfoBuilder spawns = event.getSpawns();
 
         Biome.Category biomeCategory = event.getCategory();
-        HouseOfCards.LOGGER.debug("Loading biome: " + biomeCategory + ", " + event.getClimate());
+        HouseOfCards.LOGGER.debug("Loading biome: " + biomeCategory + ", " + event.getName());
 
         if (biomeCategory == Biome.Category.OCEAN) {
             HouseOfCards.LOGGER.debug("Ocean biome loading");
