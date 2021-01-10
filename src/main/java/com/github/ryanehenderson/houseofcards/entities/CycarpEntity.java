@@ -27,7 +27,7 @@ public class CycarpEntity extends AbstractFishEntity {
 
     public static AttributeModifierMap.MutableAttribute prepareAttributes() {
         return LivingEntity.registerAttributes()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 10.0f)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 6.0f)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 8f);
     }
 
