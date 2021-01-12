@@ -1,27 +1,22 @@
 package com.github.ryanehenderson.houseofcards.entities.imugi;
 
-import com.github.ryanehenderson.houseofcards.HouseOfCards;
 import com.github.ryanehenderson.houseofcards.entities.CycarpEntity;
-import com.github.ryanehenderson.houseofcards.setup.ModEntities;
+import com.github.ryanehenderson.houseofcards.setup.ModSounds;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.monster.GuardianEntity;
-import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.DolphinEntity;
 import net.minecraft.entity.passive.TurtleEntity;
-import net.minecraft.entity.passive.WaterMobEntity;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
-import java.security.Guard;
 import java.util.Random;
 
 public class ImugiEntity extends DolphinEntity {
@@ -65,4 +60,10 @@ public class ImugiEntity extends DolphinEntity {
     public boolean canBreatheUnderwater() {
         return true;
     }
+
+    protected SoundEvent getAmbientSound() { return ModSounds.IMUGI_IDLE.get(); }
+
+    protected SoundEvent getHurtSound(DamageSource sourceIn) { return ModSounds.IMUGI_HURT.get(); }
+
+    protected SoundEvent getDeathSound() { return ModSounds.IMUGI_DEATH.get(); }
 }

@@ -1,0 +1,7 @@
+{
+  "entity.imugi.hurt": {
+    "category": "entity",
+    "subtitle": "houseofcards.subtitles.entity.imugi.hurt",
+    "sounds": [ "houseofcards:entity/imugi/imugi_hurt" ]
+  }
+}

@@ -9,6 +9,8 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.fish.AbstractFishEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
@@ -23,6 +25,7 @@ public class CycarpEntity extends AbstractFishEntity {
         this.goalSelector.addGoal(0, new FindWaterGoal(this));
         this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, ImugiEntity.class, 100f, 0.8d, 1d));
         this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 0.8d, 20));
+        this.goalSelector.addGoal(4, new TemptGoal(this, 0.5d, Ingredient.fromItems(Items.SEAGRASS), true));
     }
 
     public static AttributeModifierMap.MutableAttribute prepareAttributes() {

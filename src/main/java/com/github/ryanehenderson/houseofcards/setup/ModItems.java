@@ -1,7 +1,5 @@
 package com.github.ryanehenderson.houseofcards.setup;
 
-import com.github.ryanehenderson.houseofcards.entities.HermitDragonSageEntity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SpawnEggItem;
