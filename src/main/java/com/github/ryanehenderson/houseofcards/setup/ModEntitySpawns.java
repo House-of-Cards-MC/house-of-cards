@@ -14,14 +14,14 @@ public class ModEntitySpawns {
         MobSpawnInfoBuilder spawns = event.getSpawns();
 
         Biome.Category biomeCategory = event.getCategory();
-        HouseOfCards.LOGGER.debug("Loading biome: " + biomeCategory + ", " + event.getName());
+        //HouseOfCards.LOGGER.debug("Loading biome: " + biomeCategory + ", " + event.getName());
 
         if (biomeCategory == Biome.Category.OCEAN) {
-            HouseOfCards.LOGGER.debug("Ocean biome loading");
+            //HouseOfCards.LOGGER.debug("Ocean biome loading");
             List<MobSpawnInfo.Spawners> waterCreatureSpawners = spawns.getSpawner(EntityClassification.WATER_CREATURE);
-            HouseOfCards.LOGGER.debug("Spawners: " + waterCreatureSpawners);
+            //HouseOfCards.LOGGER.debug("Spawners: " + waterCreatureSpawners);
             waterCreatureSpawners.add(new MobSpawnInfo.Spawners(ModEntities.IMUGI_COLD.get(), 200, 10, 50));
-            HouseOfCards.LOGGER.debug("IMUGI_COLD added. Spawners: " + waterCreatureSpawners);
+            //HouseOfCards.LOGGER.debug("IMUGI_COLD added. Spawners: " + waterCreatureSpawners);
         }
     }
 }

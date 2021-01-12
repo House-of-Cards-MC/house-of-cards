@@ -63,7 +63,7 @@ public class ImugiEntity extends DolphinEntity {
 
     protected SoundEvent getAmbientSound() { return ModSounds.IMUGI_IDLE.get(); }
 
-    protected SoundEvent getHurtSound(DamageSource sourceIn) { return ModSounds.IMUGI_HURT.get(); }
+    protected SoundEvent getHurtSound(DamageSource sourceIn) { return ModSounds.ENTITY_IMUGI_HURT.get(); }
 
     protected SoundEvent getDeathSound() { return ModSounds.IMUGI_DEATH.get(); }
 }
